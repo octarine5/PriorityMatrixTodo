@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>prioritymatrix</title>
+  </head>
+  <body>
+<!-- Main Div Holding our Application Data -->
+<!-- Main Div Holding our Application Data -->
+<div class="title">Priority Matrix Todolist
+</div>
+
+
+<div class="row">
+
+<div class="containerA" id="todoA">
+  <!-- Panel for holding our input -->
+  <section class="panel">
+
+    <input type="checkbox" id="mark-all" v-bind:checked="areAllSelected" v-on:click="selectAll">
+    <input type="text" placeholder="Urgent and Important" autofocus class="text-input" v-model="newTask" v-on:keyup.enter="addTask">
+    <button v-on:click="clearList">Clear List</button>
+
+  </section>
+
+  <!-- Unordered list for holding our todo items -->
+  <ul class="list">
+
+    <li v-for="task in taskList" v-bind:class="{done: task.checked}">
+
+      <input type="checkbox" class="checkbox" v-model="task.checked">
+
+      <label for="checkbox">{{ task.text }}</label>
+
+      <button class="delete" v-on:click="removeTask(task)">X</button>
+
+    </li>
+
+  </ul>
+
+  <!-- This stringifies the contents of the data object and displays it on the page -->
+
+</div>
+
+
+<!-- Main Div Holding our Application Data -->
+<div class="containerB" id="todoB">
+  <!-- Panel for holding our input -->
+  <section class="panel">
+
+    <input type="checkbox" id="mark-all" v-bind:checked="areAllSelected" v-on:click="selectAll">
+    <input type="text" placeholder="Important and Not Urgent?" autofocus class="text-input" v-model="newTask" v-on:keyup.enter="addTask">
+    <button v-on:click="clearList">Clear List</button>
+
+  </section>
+
+  <!-- Unordered list for holding our todo items -->
+  <ul class="list">
+
+    <li v-for="task in taskList" v-bind:class="{done: task.checked}">
+
+      <input type="checkbox" class="checkbox" v-model="task.checked">
+
+      <label for="checkbox">{{ task.text }}</label>
+
+      <button class="delete" v-on:click="removeTask(task)">X</button>
+
+    </li>
+
+  </ul>
+
+  <!-- This stringifies the contents of the data object and displays it on the page -->
+
+</div>
+</div>
+
+<div class="row">
+
+<!-- Main Div Holding our Application Data -->
+<div class="containerC" id="todoC">
+  <!-- Panel for holding our input -->
+  <section class="panel">
+
+    <input type="checkbox" id="mark-all" v-bind:checked="areAllSelected" v-on:click="selectAll">
+    <input type="text" placeholder="Urgent and Not Important" autofocus class="text-input" v-model="newTask" v-on:keyup.enter="addTask">
+    <button v-on:click="clearList">Clear List</button>
+
+  </section>
+
+  <!-- Unordered list for holding our todo items -->
+  <ul class="list">
+
+    <li v-for="task in taskList" v-bind:class="{done: task.checked}">
+
+      <input type="checkbox" class="checkbox" v-model="task.checked">
+
+      <label for="checkbox">{{ task.text }}</label>
+
+      <button class="delete" v-on:click="removeTask(task)">X</button>
+
+    </li>
+
+  </ul>
+
+  <!-- This stringifies the contents of the data object and displays it on the page -->
+
+</div>
+
+
+<!-- Main Div Holding our Application Data -->
+<div class="containerD" id="todoD">
+  <!-- Panel for holding our input -->
+  <section class="panel">
+
+    <input type="checkbox" id="mark-all" v-bind:checked="areAllSelected" v-on:click="selectAll">
+    <input type="text" placeholder="Not Urgent and Not Important" autofocus class="text-input" v-model="newTask" v-on:keyup.enter="addTask">
+    <button v-on:click="clearList">Clear List</button>
+
+  </section>
+
+  <!-- Unordered list for holding our todo items -->
+  <ul class="list">
+
+    <li v-for="task in taskList" v-bind:class="{done: task.checked}">
+
+      <input type="checkbox" class="checkbox" v-model="task.checked">
+
+      <label for="checkbox">{{ task.text }}</label>
+
+      <button class="delete" v-on:click="removeTask(task)">X</button>
+
+    </li>
+
+  </ul>
+
+  <!-- This stringifies the contents of the data object and displays it on the page -->
+
+</div>
+</div>
+
+
+
+
+
+
+    <!-- built files will be auto injected -->
+  </body>
+</html>

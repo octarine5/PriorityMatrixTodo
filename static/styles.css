@@ -1,0 +1,39 @@
+.title{
+    color: blue;
+    font-size: 16pt;
+     text-align: center;
+      border: 3px solid green;
+    
+  }
+  
+  
+  .containerA {
+  
+   background-color: darkred;
+    float: left;
+    width: 50%;
+      height: 300px;
+  }
+  
+  .containerB {
+     background-color: lightyellow;
+  
+    float: right;
+    width: 50%;
+      height: 300px;
+  }
+  .containerC {
+      background-color: lightblue;
+  
+    float: left;
+    width: 50%;
+      height: 300px;
+  }
+  
+  .containerD {
+    float: right;
+    width: 50%;
+      height: 300px;
+  }
+  
+  
